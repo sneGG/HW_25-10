@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    </style>
+</head>
+<body>
+<input id="my-input">
+<input type="button" onclick="javascript:run();">
+<div id="result"></div>
+
+
+<script>
+        function run() {
+            var el = document.getElementById("my-input");
+            if (el) {
+                var age = parseInt(el.value);
+                if ( !isNaN(age) ) {
+                    document.getElementById("result").textContent = "Your Age is :" + el.value;
+                } else {
+                    alert("Error!");
+                }
+            } else {
+                alert('no element');
+            }
+        }
+        </script>
+        </body>
+</html>

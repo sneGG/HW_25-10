@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        
+            var helloMsg='Привет';
+            var name1 = prompt('Введите фамилию:');
+            console.log(name1);
+            var name2 = prompt('Введите имя:');
+            console.log(name2);
+            var name3 = prompt('Введите отчество:');
+            console.log(name3);
+            var years = prompt('Сколько вам лет?');
+            console.log( parseInt(years));
+            var plus = (parseInt(years)+5);
+            var gender = confirm('Ваш пол - мужской?');
+            if(gender = true) { 
+              var gender = "мужской";
+              console.log("мужской");
+            }
+             else{
+               var gender = "женский";
+               console.log("женский");
+             }
+            var gender1 = gender;
+            var pens = (years>65)?"да":"нет";
+          </script>
+        <script>
+        alert("ваше ФИО:"+ name1 +' '+ name2 +' '+ name3 +'\n'+"ваш возраст в годах:" + years +'\n'+"ваш возраст в днях:" + years*365 +'\n'+"через 5 лет вам будет:" + plus +'\n'+"ваш пол:"+ gender1 +'\n' + "вы на пенсии:" + pens) 
+        </script>
+</body>
+</html>

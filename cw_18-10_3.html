@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    </style>
+</head>
+<body>
+<input id="number1">
+<select id="operation">
+<option value="Select">Select</option>
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+<option value="%">%</option>
+</select>
+<input id="number2">
+<input type="button" onclick="javascript:calculate();" value="Calculate">
+<div id="result"></div>
+
+
+<script>
+        function calculate() {
+            var el1 = document.getElementById("number1");
+            var el2 = document.getElementById("number2");
+            var op = document.getElementById("operation");
+            if (el1 && el2 && op) {
+                var left = parseInt(el1.value);
+                var right = parseInt(el2.value);
+                var operator = op.value;
+                if ( !isNaN(left) && !isNaN(right)) {
+                    switch (operator) {
+                    case "+":
+                    document.getElementById("result").innerHTML = "<b>Sum is </b>" + (left+right);
+                    break;
+                    default: alert("Wrong operation")
+                    case "-":
+                    document.getElementById("result").innerHTML = "<b>Diff </b>" + (left+right);
+                    break;
+                    default: alert("Wrong operation")
+                    case "*":
+                    document.getElementById("result").innerHTML = "<b>Multiplay </b>" + (left*right);
+                    break;
+                    default: alert("Wrong operation")
+                    case "/":
+                    document.getElementById("result").innerHTML = "<b>Divide </b>" + (left*right);
+                    break;
+                    default: alert("Wrong operation")
+                    case "%":
+                    document.getElementById("result").innerHTML = "<b>Fraction </b>" + (left*right);
+                    break;
+                    default: alert("Wrong operation")
+                } 
+                }
+                else {
+                    alert("Error!");
+                }
+            } else {
+                alert('no element');
+            }
+        }
+        </script>
+        </body>
+</html>

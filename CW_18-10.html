@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    </style>
+</head>
+<body>
+    <script>
+    function add (n1,n2) {
+    return n1 / n2;
+    }
+    var add = (n1, n2) => n1/n2;
+    var res = add("8","2"); 
+    alert(res);
+    console.log(res);
+    
+
+    </script>
+
+    <script>
+    function run() {
+        var el = document.getElementById("my-input");
+        if (el) {
+            var age = parseInt(el.value);
+            if ( !isNaN(age)) {
+                document.getElementById("my-input").textContent = "Your Age is :" + el.value;
+            }
+            else {
+                alert("Error!");
+            }
+        }
+        else {
+            alert('no element');
+        }
+    }
+    </script>
+</body>
+</html>

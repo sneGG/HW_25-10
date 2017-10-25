@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    </style>
+</head>
+<body>
+<input id="number1">
+<select id="operation" required>
+<option value>Select operation</option>
+<option value="0">+</option>
+<option value="1">-</option>
+<option value="2">*</option>
+<option value="3">/</option>
+<option value="4">%</option>
+</select>
+<input id="number2">
+<input type="button" onclick="javascript:calculate();" value="Calculate">
+<input type="button" onclick="help();" value="HELP">
+<input type="button" onclick="help();" value="HELP do/while">
+<div id="result"></div>
+
+
+<script>
+        var opArray =['+','-','*','/','%'];
+        function help() {
+            var my_help = '';
+
+            var counter = 0;
+            do { 
+                if (opArray.length === 0) break;
+                my_help += opArray[counter] + "- super Function\n\n";
+                counter++;
+
+            }
+            while (counter < opArray.length)
+            alert(my_help);
+        }
+        function calculate() {
+            var el1 = document.getElementById("number1");
+            var el2 = document.getElementById("number2");
+            var op = document.getElementById("operation");
+            if (el1 && el2 && op) {
+                var left = parseInt(el1.value);
+                var right = parseInt(el2.value);
+                var operator = op.value;
+                if ( !isNaN(left) && !isNaN(right)) {
+                    
+
+                    switch (opArray[+operator]) {
+                    case "+":
+                    setResult(left+right);
+                    break;
+                    case "-":
+                    setResult(left-right);
+                    break;
+                    case "*":
+                    setResult(left*right);
+                    break;
+                    case "/":
+                    setResult(left/right);
+                    break;
+                    case "%":
+                    setResult(left%right);
+                    break;
+                    default: alert("Wrong operation");
+                                   } 
+                } else {
+                    alert("Error!");
+                }
+            } else {
+                alert('no element');
+            }
+        }
+            function setResult(result) {
+                document.getElementById("result").innerHTML = "<b>Result is:</b>" + result;
+            }
+        
+        </script>
+        </body>
+</html>
